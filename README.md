@@ -1,59 +1,51 @@
-# Angular21Boilerplate
+# 🔐 IPT 2026 – Full-Stack Authentication App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.10.
+**A full-stack user authentication and account management system with an Angular frontend and a Node.js + TypeScript backend.**
 
-## Development server
+Built for our Integrative Programming and Technologies (IPT) course.
 
-To start a local development server, run:
+## ✨ Features
 
-```bash
-ng serve
+- Sign up with **email verification**
+- Log in with **JWT** + **refresh tokens** (auto-refresh in the frontend)
+- Forgot / reset password
+- View and update your profile
+- **Admin area** to list, add, edit and delete accounts
+- **Role-based** route guards (Admin / User)
+- Swagger API documentation
+
+## 🛠️ Tech Stack
+
+| Part | Technology |
+|---|---|
+| Frontend | Angular, TypeScript |
+| Backend | Node.js, Express, TypeScript |
+| Database | MySQL (Sequelize) |
+| Auth | JWT, refresh tokens, bcrypt |
+| Docs | Swagger |
+
+## 📁 Project Structure
+
+```
+backend/    Express + TypeScript API (accounts, auth, email, swagger)
+frontend/   Angular app (account, admin, profile, home)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Getting Started
 
-## Code scaffolding
+**Requirements:** Node.js 18+, MySQL, Angular CLI
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+**Backend**
 ```bash
-ng generate component component-name
+cd backend
+npm install
+npm run start:dev      # runs on http://localhost:4000
 ```
+Set your database and JWT settings with environment variables (`DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `JWT_SECRET`).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+**Frontend**
 ```bash
-ng generate --help
+cd frontend
+npm install
+ng serve               # opens on http://localhost:4200
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
